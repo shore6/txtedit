@@ -1,0 +1,15 @@
+{
+  "name": "txtedit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lightweight txt-only notes app on Cloudflare Workers + D1",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply txtedit --local && wrangler dev",
+    "deploy": "wrangler d1 migrations apply txtedit --remote && wrangler deploy",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "wrangler": "4.157.0"
+  }
+}
